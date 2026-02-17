@@ -21,3 +21,8 @@ app.include_router(success_router)
 @app.get("/")
 def root():
     return {"ok": True}
+    
+@app.get("/__routes")
+def list_routes():
+    return [route.path for route in app.routes]
+
