@@ -24,7 +24,11 @@ def root():
     
 @app.get("/__routes")
 def list_routes():
-    return [route.path for route in app.routes]
+    return [
+        {"path": route.path, "methods": list(route.methods)}
+        for route in app.routes
+    ]
+
 
 @app.get("/webhook")
 def webhook_get_test():
