@@ -26,3 +26,7 @@ def root():
 def list_routes():
     return [route.path for route in app.routes]
 
+@app.get("/webhook")
+def webhook_get_test():
+    return {"method": "GET allowed"}
+
