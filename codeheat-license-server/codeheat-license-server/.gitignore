@@ -1,0 +1,22 @@
+# secrets
+.env
+
+# private minter + keys
+private/
+*.pem
+*.key
+*.der
+*.p12
+
+# python cache
+__pycache__/
+*.pyc
+
+# local db
+*.sqlite
+*.db
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
